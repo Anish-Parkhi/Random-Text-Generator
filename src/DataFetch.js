@@ -25,9 +25,21 @@ function DataFetch() {
     },[idFromButtonClick])
   return (
     <div className='post_generator'>
-        <input type="text"  value={id}   onChange={e => setId(e.target.value)} />
-        <button type='button' onClick={handleClick}>Fetch Post </button>
-        <div className='fetched-post'>{post.title}</div>
+
+        <div>
+            <h2>Random Post Generator</h2>
+        </div>
+        <div className='input-field'>
+            <input type= "text"  value={id}   onChange={e => setId(e.target.value)} />
+        </div>
+        <div>
+        <button type='button' className='btn' onClick={handleClick}>Fetch Post </button>
+        </div>
+        <div>
+            <h4>The fetched post is 👇</h4>
+            <div className='fetched-post'>{post.title}</div>
+        </div>
+        
     </div>
   )
 }
